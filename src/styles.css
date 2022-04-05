@@ -1,0 +1,55 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #0D1F2D, #9EA3B0);
+}
+
+.calculator-grid {
+  justify-content: center;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows:  minmax(7rem, auto) repeat(5, 6rem); /* Allowing auto enables the output div to grow the more encumbered it becomes. */
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.spans-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1; /* Using grid column this way allows for the entire output div to span the entire top row. */
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  flex-direction: column; /* Using column as the flex direction allows the previous and current inputs to be stacked on each other. */
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word; /* Allows longer outputs to wrap in div as it grows. */
+  word-break: break-all;
+  padding: .75rem; 
+
+}
+
+.output .previous-input {
+  color: rgba(255, 255, 255, .6);
+  font-size: 1.5rem;
+}
+
+.output .current-input {
+  color: white;
+  font-size: 2.5rem;
+}
