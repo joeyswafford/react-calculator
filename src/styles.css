@@ -1,16 +1,20 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: border-box;
-}
+} */
 
 body {
   margin: 0;
-  background: linear-gradient(to right, #0D1F2D, #9EA3B0);
+  background: linear-gradient(to left, #0D1F2D, #9EA3B0);
 }
 
+/* .calculator-shell {
+
+} */
+
 .calculator-grid {
-  justify-content: center;
-  margin-top: 5rem;
   display: grid;
+  justify-content: center;
+  margin-top: 10rem;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows:  minmax(7rem, auto) repeat(5, 6rem); /* Allowing auto enables the output div to grow the more encumbered it becomes. */
 }
@@ -41,12 +45,11 @@ body {
   word-wrap: break-word; /* Allows longer outputs to wrap in div as it grows. */
   word-break: break-all;
   padding: .75rem; 
-
 }
 
 .output .previous-input {
   color: rgba(255, 255, 255, .6);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .output .current-input {
