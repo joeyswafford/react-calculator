@@ -16,7 +16,7 @@ const App = () => {
     setResult(result.concat(input.target.name)); // Allows state to be whatever input the user chooses added on to the current state.
   };
 
-  const addOperation = (input) => {
+  const useOperation = (input) => {
     setResult(result.concat(input.target.name)); // NEED TO FIGURE OUT OPERATIONS(/, *, +, -)
 
     // How can I access the previous state when adding an operation? I want to display the previous state in the top input field AFTER the user clicks on an operation. The bottom input field would then be reserved for the next input the user chooses.
