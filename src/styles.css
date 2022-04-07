@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to left, #0D1F2D, #9EA3B0);
+  /* background: linear-gradient(to left, #0D1F2D, #9EA3B0); */
+  background: black;
 }
 
 /* .calculator-shell {
@@ -21,14 +22,15 @@ body {
 
 .calculator-grid > button {
   cursor: pointer;
+  color: white;
   font-size: 1.5rem;
   border: 1px solid white;
   outline: none;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .calculator-grid > button:hover {
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(41, 33, 68, 0.5);
 }
 
 .spans-two {
@@ -37,7 +39,8 @@ body {
 
 .output {
   grid-column: 1 / -1; /* Using grid column this way allows for the entire output div to span the entire top row. */
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(41, 33, 68, 0.5);
+  border: 1px white solid;
   display: flex;
   flex-direction: column; /* Using column as the flex direction allows the previous and current inputs to be stacked on each other. */
   align-items: flex-end;
