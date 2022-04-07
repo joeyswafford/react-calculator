@@ -3,20 +3,23 @@
 } */
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  /* background: linear-gradient(to left, #0D1F2D, #9EA3B0); */
   background: #0D1F2D;
 }
 
-.calculator-grid {
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
+.calculator-shell {
+  background-color: black;
   border: 20px solid black;
   border-radius: 20px;
-  background-color: black;
+  margin-top: 10rem;
+}
+
+.calculator-grid {
   display: grid;
   justify-content: center;
-  margin-top: 10rem;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows:  minmax(7rem, auto) repeat(5, 6rem); /* Allowing auto enables the output div to grow the more encumbered it becomes. */
 }
@@ -43,8 +46,7 @@ body {
 .output {
   margin: 5px;
   grid-column: 1 / -1; /* Using grid column this way allows for the entire output div to span the entire top row. */
-  background-color: rgba(0, 0, 0, 0.5);
-  /* border: 1px white solid; */
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column; /* Using column as the flex direction allows the previous and current inputs to be stacked on each other. */
   align-items: flex-end;
@@ -54,28 +56,25 @@ body {
   padding: .75rem; 
 }
 
-.output .current-input input[type="text"] {
-  display: flex;
-  justify-content: flex-end;
+.output .previous-input input[type="text"] {
   background-color: black;
   color: white;
   font-size: 1.5rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  border: none;
   height: 35px;
   width: 350px;
 }
 
-/* input[type="text"] {
+.output .current-input input[type="text"] {
   background-color: black;
   color: white;
   font-size: 1.5rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  border: none;
   height: 35px;
   width: 350px;
-} */
+}
 
-/* .output .previous-input {
-  color: rgba(255, 255, 255, .6);
-  font-size: 1rem;
-} */
+
 
