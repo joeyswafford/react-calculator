@@ -30,7 +30,7 @@ const App = () => {
   };
 
   const evaluate = () => {
-    // This works okay, but it seems kinda sloppy. How can I make this better? Maybe instead of allowing the user to input more than one operation, the calculator should ONLY LET the user input one operation from the start. So if I entered the + operation and tried to enter the * directly after that the calculator wouldnt allow it. Good idea.
+    // This works okay, but it seems kinda sloppy. How can I make this better? Maybe instead of allowing the user to input more than one operation, the calculator should ONLY LET the user input one operation from the start(this needs to apply to the . digit as well since it doesnt make sense to have more than one .). So if I entered the + operation and tried to enter the * directly after that the calculator wouldnt allow it. Good idea.
     try {
       setResult(eval(result).toString());
     } catch (error) {
@@ -57,19 +57,19 @@ const App = () => {
         <button className="highlight" onClick={clear}>
           C
         </button>
-        <button className="highlight" name="/" onClick={addDigit}>
+        <button className="highlight" name="/" onClick={useOperation}>
           ÷
         </button>
-        <button className="no-highlight" name="1" onClick={addDigit}>
+        <button className="no-highlight" name="7" onClick={addDigit}>
           7
         </button>
-        <button className="no-highlight" name="2" onClick={addDigit}>
+        <button className="no-highlight" name="8" onClick={addDigit}>
           8
         </button>
-        <button className="no-highlight" name="3" onClick={addDigit}>
+        <button className="no-highlight" name="9" onClick={addDigit}>
           9
         </button>
-        <button className="highlight" name="*" onClick={addDigit}>
+        <button className="highlight" name="*" onClick={useOperation}>
           *
         </button>
         <button className="no-highlight" name="4" onClick={addDigit}>
@@ -81,19 +81,19 @@ const App = () => {
         <button className="no-highlight" name="6" onClick={addDigit}>
           6
         </button>
-        <button className="highlight" name="+" onClick={addDigit}>
+        <button className="highlight" name="+" onClick={useOperation}>
           +
         </button>
-        <button className="no-highlight" name="7" onClick={addDigit}>
+        <button className="no-highlight" name="1" onClick={addDigit}>
           1
         </button>
-        <button className="no-highlight" name="8" onClick={addDigit}>
+        <button className="no-highlight" name="2" onClick={addDigit}>
           2
         </button>
-        <button className="no-highlight" name="9" onClick={addDigit}>
+        <button className="no-highlight" name="3" onClick={addDigit}>
           3
         </button>
-        <button className="highlight" name="-" onClick={addDigit}>
+        <button className="highlight" name="-" onClick={useOperation}>
           -
         </button>
         <button className="no-highlight" name="." onClick={addDigit}>
