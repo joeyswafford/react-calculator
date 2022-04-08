@@ -32,14 +32,16 @@ body {
   font-size: 2rem;
   border-radius: 20px;
   outline: none;
+  transition: ease-in-out .1s;
 }
 
 .calculator-grid > button:hover {
   background-color: rgba(41, 33, 68, 0.5);
+  transform: scale(.95);
 }
 
 .highlight {
-  background-color: #41658A;
+  background-color: rgba(41, 33, 68, 0.5);
 }
 
 .no-highlight {
@@ -48,7 +50,7 @@ body {
 
 .spans-two {
   grid-column: span 2;
-  background-color: #41658A;
+  background-color: rgba(41, 33, 68, 0.5)
 }
 
 .output {
