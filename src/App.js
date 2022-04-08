@@ -6,13 +6,13 @@ import "./styles.css";
 // 1: *Clear all inputs.
 // 2: *Clear most recent input.
 // 3: *Add a digit to the output menu.
-// 4: Use an operation(+, -, *, /).
+// 4: *Use an operation(+, -, *, /).
 // 5: *Evaluate inputs.
 
 const App = () => {
   const [result, setResult] = useState("");
 
-  const prevInput = usePrevious(result); // Global variable to access the previous state using custom react hook.
+  const prevInput = usePrevious(result); // Variable to access the previous state using custom react hook.
 
   // FUNCTIONS
 
@@ -27,17 +27,17 @@ const App = () => {
   const addDigit = (input) => {
     setResult(result.concat(input.target.name)); // Allows state to be whatever input the user chooses added on to the current state.
 
-    // Figure out how to only allow for one "." digit to be entered at a time. If/switch statement?
+    // Figure out how to only allow one "." digit to be entered at a time. If/switch statement?
   };
 
   const useOperation = (input) => {
-    setResult(result.concat(input.target.name)); // NEED TO FIGURE OUT OPERATIONS(/, *, +, -)
+    setResult(result.concat(input.target.name));
 
     // Figure out how to only allow for one operation to be used at a time. If/switch statement?
   };
 
   const evaluate = () => {
-    // This works okay, but it seems kinda sloppy. How can I make this better? Maybe instead of allowing the user to input more than one operation, the calculator should ONLY LET the user input one operation from the start(this needs to apply to the . digit as well since it doesnt make sense to have more than one .). So if I entered the + operation and tried to enter the * directly after that the calculator wouldnt allow it. Good idea.
+    // Figure out how to only allow one operation to be entered at a time. Same goes for the "." digit.
     try {
       setResult(eval(result).toString());
     } catch (error) {
