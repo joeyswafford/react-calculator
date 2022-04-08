@@ -29,28 +29,56 @@ body {
   margin: 5px;
   cursor: pointer;
   color: white;
-  font-size: 2rem;
   border-radius: 20px;
   outline: none;
-  transition: ease-in-out .1s;
+
 }
 
-.calculator-grid > button:hover {
+/* .calculator-grid > button:hover {
   background-color: rgba(41, 33, 68, 0.5);
-  transform: scale(.95);
-}
+  transform: scale(1.1);
+} */
 
 .highlight {
   background-color: rgba(41, 33, 68, 0.5);
+  font-size: 2rem;
+  transition: ease-in-out .1s;
+}
+
+.highlight:hover {
+  transform: scale(.95);
 }
 
 .no-highlight {
   background-color: black;
+  font-size: 2rem;
+  transition: ease-in-out .1s;
+}
+
+.no-highlight:hover {
+  background-color: rgba(41, 33, 68, 0.5);
+  transform: scale(.95);
+}
+
+.secondary-buttons {
+  background-color: rgba(41, 33, 68, 0.5);
+  font-size: 1.5rem;
+  transition: ease-in-out .1s;
+}
+
+.secondary-buttons:hover{
+  transform: scale(1.1);
 }
 
 .spans-two {
   grid-column: span 2;
-  background-color: rgba(41, 33, 68, 0.5)
+  background-color: rgba(41, 33, 68, 0.5);
+  font-size: 2rem;
+  transition: ease-in-out .1s;
+}
+
+.spans-two:hover {
+  transform: scale(.95);
 }
 
 .output {

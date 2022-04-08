@@ -136,16 +136,28 @@ const App = () => {
         <button className="spans-two" onClick={evaluate}>
           =
         </button>
-        <button className="highlight" name="x²" onClick={addExponentSquared}>
+        <button
+          className="secondary-buttons"
+          name="x²"
+          onClick={addExponentSquared}
+        >
           x²
         </button>
-        <button className="highlight" name="x³" onClick={addExponentCubed}>
+        <button
+          className="secondary-buttons"
+          name="x³"
+          onClick={addExponentCubed}
+        >
           x³
         </button>
-        <button className="highlight" name="log₂" onClick={addLogarithm}>
+        <button
+          className="secondary-buttons"
+          name="log₂"
+          onClick={addLogarithm}
+        >
           log₂
         </button>
-        <button className="highlight" name="%" onClick={addPercentage}>
+        <button className="secondary-buttons" name="%" onClick={addPercentage}>
           %
         </button>
       </div>
