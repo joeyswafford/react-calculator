@@ -47,16 +47,12 @@ const App = () => {
     }
   };
 
-  const addExponentSquared = () => {
+  const addSquared = () => {
     // debugger;
-    try {
-      setResult(Math.pow(result, 2));
-    } catch (error) {
-      setResult("Error");
-    }
+    setResult(Math.pow(result, 2));
   };
 
-  const addExponentCubed = () => {
+  const addCubed = () => {
     setResult(Math.pow(result, 3));
   };
 
@@ -136,18 +132,10 @@ const App = () => {
         <button className="spans-two" onClick={evaluate}>
           =
         </button>
-        <button
-          className="secondary-buttons"
-          name="x²"
-          onClick={addExponentSquared}
-        >
+        <button className="secondary-buttons" name="x²" onClick={addSquared}>
           x²
         </button>
-        <button
-          className="secondary-buttons"
-          name="x³"
-          onClick={addExponentCubed}
-        >
+        <button className="secondary-buttons" name="x³" onClick={addCubed}>
           x³
         </button>
         <button
