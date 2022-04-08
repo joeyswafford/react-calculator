@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DigitButton from "./components/DigitButton";
 import usePrevious from "./custom-hooks/usePrevious";
 import "./styles.css";
 
@@ -87,6 +88,7 @@ const App = () => {
         <button className="highlight" name="/" onClick={useOperation}>
           ÷
         </button>
+        {/* <DigitButton digit="7" /> */}
         <button className="no-highlight" name="7" onClick={addDigit}>
           7
         </button>
