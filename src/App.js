@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+// BASIC FUNCTIONALITY FOR CALCULATOR
+// 1: Clear all inputs.
+// 2: Clear most recent input.
+// 3: Add a digit to the output menu.
+// 4: Use an operation(+, -, *, /).
+// 5: Evaluate inputs.
+
 const App = () => {
   const [result, setResult] = useState("");
 
@@ -47,50 +54,52 @@ const App = () => {
         <button className="spans-two" onClick={allClear}>
           AC
         </button>
-        <button onClick={clear}>C</button>
-        <button name="/" onClick={addDigit}>
+        <button className="highlight" onClick={clear}>
+          C
+        </button>
+        <button className="highlight" name="/" onClick={addDigit}>
           ÷
         </button>
-        <button name="1" onClick={addDigit}>
-          1
-        </button>
-        <button name="2" onClick={addDigit}>
-          2
-        </button>
-        <button name="3" onClick={addDigit}>
-          3
-        </button>
-        <button name="*" onClick={addDigit}>
-          *
-        </button>
-        <button name="4" onClick={addDigit}>
-          4
-        </button>
-        <button name="5" onClick={addDigit}>
-          5
-        </button>
-        <button name="6" onClick={addDigit}>
-          6
-        </button>
-        <button name="+" onClick={addDigit}>
-          +
-        </button>
-        <button name="7" onClick={addDigit}>
+        <button className="no-highlight" name="1" onClick={addDigit}>
           7
         </button>
-        <button name="8" onClick={addDigit}>
+        <button className="no-highlight" name="2" onClick={addDigit}>
           8
         </button>
-        <button name="9" onClick={addDigit}>
+        <button className="no-highlight" name="3" onClick={addDigit}>
           9
         </button>
-        <button name="-" onClick={addDigit}>
+        <button className="highlight" name="*" onClick={addDigit}>
+          *
+        </button>
+        <button className="no-highlight" name="4" onClick={addDigit}>
+          4
+        </button>
+        <button className="no-highlight" name="5" onClick={addDigit}>
+          5
+        </button>
+        <button className="no-highlight" name="6" onClick={addDigit}>
+          6
+        </button>
+        <button className="highlight" name="+" onClick={addDigit}>
+          +
+        </button>
+        <button className="no-highlight" name="7" onClick={addDigit}>
+          1
+        </button>
+        <button className="no-highlight" name="8" onClick={addDigit}>
+          2
+        </button>
+        <button className="no-highlight" name="9" onClick={addDigit}>
+          3
+        </button>
+        <button className="highlight" name="-" onClick={addDigit}>
           -
         </button>
-        <button name="." onClick={addDigit}>
+        <button className="no-highlight" name="." onClick={addDigit}>
           .
         </button>
-        <button name="0" onClick={addDigit}>
+        <button className="no-highlight" name="0" onClick={addDigit}>
           0
         </button>
         <button className="spans-two" onClick={evaluate}>
