@@ -21,3 +21,7 @@ As a user, I want my calculator to show my previous input above my current input
 ![calc-ss-2](https://user-images.githubusercontent.com/84674745/162357411-068344c8-4580-4bd8-b582-7f8730aea75a.JPG)
 
 ![calc-ss-3](https://user-images.githubusercontent.com/84674745/162357412-51b4addc-6fb0-4b61-8996-81a1f634205b.JPG)
+
+# Future Development
+
+Ultimately, I am going to add functionality to support exponenential operations, square roots and logarithms.
