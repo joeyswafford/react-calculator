@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import usePrevious from "./custom-hooks/usePrevious";
 import "./styles.css";
 
 // BASIC FUNCTIONALITY FOR CALCULATOR
-// 1: Clear all inputs.
-// 2: Clear most recent input.
-// 3: Add a digit to the output menu.
+// 1: *Clear all inputs.
+// 2: *Clear most recent input.
+// 3: *Add a digit to the output menu.
 // 4: Use an operation(+, -, *, /).
-// 5: Evaluate inputs.
+// 5: *Evaluate inputs.
 
 const App = () => {
   const [result, setResult] = useState("");
+
+  const prevInput = usePrevious(result);
 
   const allClear = () => {
     setResult("");
@@ -26,7 +29,7 @@ const App = () => {
   const useOperation = (input) => {
     setResult(result.concat(input.target.name)); // NEED TO FIGURE OUT OPERATIONS(/, *, +, -)
 
-    // How can I access the previous state when adding an operation? I want to display the previous state in the top input field AFTER the user clicks on an operation. The bottom input field would then be reserved for the next input the user chooses.
+    // How can I allow only one operation to be used at a time?
   };
 
   const evaluate = () => {
@@ -45,7 +48,7 @@ const App = () => {
         {/* Output will contain two sections with the top section containing what the user previously entered and the focus will be on what the user is currently entering. */}
         <div className="output">
           <form className="previous-input">
-            <input type="text" />
+            <input type="text" value={prevInput} />
           </form>
           <form className="current-input">
             <input type="text" value={result} />
@@ -57,7 +60,12 @@ const App = () => {
         <button className="highlight" onClick={clear}>
           C
         </button>
-        <button className="highlight" name="/" onClick={useOperation}>
+        <button
+          className="highlight"
+          name="/"
+          // value={prevInput}
+          onClick={useOperation}
+        >
           ÷
         </button>
         <button className="no-highlight" name="7" onClick={addDigit}>
@@ -69,7 +77,12 @@ const App = () => {
         <button className="no-highlight" name="9" onClick={addDigit}>
           9
         </button>
-        <button className="highlight" name="*" onClick={useOperation}>
+        <button
+          className="highlight"
+          name="*"
+          // value={prevInput}
+          onClick={useOperation}
+        >
           *
         </button>
         <button className="no-highlight" name="4" onClick={addDigit}>
@@ -81,7 +94,12 @@ const App = () => {
         <button className="no-highlight" name="6" onClick={addDigit}>
           6
         </button>
-        <button className="highlight" name="+" onClick={useOperation}>
+        <button
+          className="highlight"
+          name="+"
+          // value={prevInput}
+          onClick={useOperation}
+        >
           +
         </button>
         <button className="no-highlight" name="1" onClick={addDigit}>
@@ -93,7 +111,12 @@ const App = () => {
         <button className="no-highlight" name="3" onClick={addDigit}>
           3
         </button>
-        <button className="highlight" name="-" onClick={useOperation}>
+        <button
+          className="highlight"
+          name="-"
+          // value={prevInput}
+          onClick={useOperation}
+        >
           -
         </button>
         <button className="no-highlight" name="." onClick={addDigit}>
