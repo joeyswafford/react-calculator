@@ -9,6 +9,8 @@ import "./styles.css";
 // 4: *Use an operation(+, -, *, /).
 // 5: *Evaluate inputs.
 
+// NEED TO FORMAT OUTPUTS WITH commas and periods.
+
 const App = () => {
   const [result, setResult] = useState("");
 
@@ -43,6 +45,28 @@ const App = () => {
     } catch (error) {
       setResult("Error");
     }
+  };
+
+  const addExponentSquared = () => {
+    // debugger;
+    try {
+      setResult(Math.pow(result, 2));
+    } catch (error) {
+      setResult("Error");
+    }
+  };
+
+  const addExponentCubed = () => {
+    setResult(Math.pow(result, 3));
+  };
+
+  const addPercentage = () => {
+    // debugger;
+    setResult(result / 100);
+  };
+
+  const addLogarithm = () => {
+    setResult(Math.log2(result));
   };
 
   return (
@@ -111,6 +135,18 @@ const App = () => {
         </button>
         <button className="spans-two" onClick={evaluate}>
           =
+        </button>
+        <button className="highlight" name="x²" onClick={addExponentSquared}>
+          x²
+        </button>
+        <button className="highlight" name="x³" onClick={addExponentCubed}>
+          x³
+        </button>
+        <button className="highlight" name="log₂" onClick={addLogarithm}>
+          log₂
+        </button>
+        <button className="highlight" name="%" onClick={addPercentage}>
+          %
         </button>
       </div>
     </div>
