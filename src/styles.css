@@ -120,10 +120,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 4rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.repo-link {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.25rem;
 }
 
 .github-icon {
   zoom: 3;
+  transition: ease-in-out .2s;
+}
+
+.github-icon:hover {
+  transform: scale(1.3);
 }
 
 
