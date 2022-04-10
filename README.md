@@ -24,4 +24,3 @@ As a user, I want my calculator to show my previous input above my current input
 
 # Future Development
 
-Ultimately, I am going to add functionality to support exponenential operations, square roots and logarithms.
