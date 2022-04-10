@@ -94,6 +94,11 @@ const App = () => {
         <Button text="√" onClick={squareRoot} hasHighlight isSecondary />
         <Button text="%" onClick={calcPercantage} hasHighlight isSecondary />
       </div>
+      <div>
+        <a href="https://github.com/joeyswafford/react-calculator">
+          Github Repository
+        </a>
+      </div>
     </div>
   );
 };
