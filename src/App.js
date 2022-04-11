@@ -61,7 +61,6 @@ const App = () => {
   };
 
   const sine = () => {
-    let pi = Math.pi;
     setResult(Math.sin(result));
   };
 
@@ -73,9 +72,9 @@ const App = () => {
     setResult(Math.tan(result));
   };
 
-  // const radToDeg = () => {
+  // const radToDeg = (result) => {
   //   let pi = Math.pi;
-  //   setResult(result * (180 / pi));
+  //   setResult(result * (pi / 180));
   // };
 
   const inProgress = () => {
