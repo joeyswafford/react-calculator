@@ -60,6 +60,28 @@ const App = () => {
     setResult(Math.sqrt(result));
   };
 
+  const sine = () => {
+    let pi = Math.pi;
+    setResult(Math.sin(result));
+  };
+
+  const cosine = () => {
+    setResult(Math.cos(result));
+  };
+
+  const tangent = () => {
+    setResult(Math.tan(result));
+  };
+
+  // const radToDeg = () => {
+  //   let pi = Math.pi;
+  //   setResult(result * (180 / pi));
+  // };
+
+  const inProgress = () => {
+    setResult("Feature in Progress!");
+  };
+
   return (
     <div>
       <div className="calculator-shell">
@@ -96,6 +118,10 @@ const App = () => {
           <Button text="x³" onClick={cube} hasHighlight isSecondary />
           <Button text="√" onClick={squareRoot} hasHighlight isSecondary />
           <Button text="%" onClick={calcPercantage} hasHighlight isSecondary />
+          <Button text="sin" onClick={sine} hasHighlight isSecondary />
+          <Button text="cos" onClick={cosine} hasHighlight isSecondary />
+          <Button text="tan" onClick={tangent} hasHighlight isSecondary />
+          <Button text="deg" onClick={inProgress} hasHighlight isSecondary />
         </div>
       </div>
       <div className="repo-container">
